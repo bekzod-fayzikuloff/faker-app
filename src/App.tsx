@@ -36,9 +36,9 @@ const addCharacter = (text: string) => {
 }
 
 const changePlaces = (text: string) => {
-  const swapIndex = Math.floor(Math.random() * text.length - 1);
+  const swapIndex = Math.floor(Math.random() * text.length);
   const tempStr = text.substring(swapIndex, swapIndex + 2)
-  return text.replace(tempStr, `${tempStr[1]}${tempStr[0]}`)
+  return text.replace(tempStr, `${tempStr[1] && tempStr[1]}${tempStr[0] && tempStr[0]}`)
 
 }
 
