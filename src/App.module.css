@@ -1,0 +1,35 @@
+.form__root {
+  display: flex;
+  justify-content: center;
+}
+
+.faker__form{
+  margin: 20pt;
+  padding: 20pt;
+  border-radius: 7pt;
+  border: 1px solid gray;
+  width: 25%;
+}
+
+
+.slider__typography {
+  text-align: center;
+  padding-top: 10pt;
+}
+
+.seed__root {
+  padding-top: 15pt;
+}
+
+.seed__root button {
+  margin-right: 10pt;
+}
+
+.seed__root input {
+  border: 1px solid gray;
+  margin-bottom: 14pt;
+}
+
+.lang__select {
+  border: 1px solid gray !important;
+}
