@@ -5,7 +5,7 @@ import {Button, Form} from "react-bootstrap";
 import style from "./App.module.css"
 import {Grid, Input, Slider, Typography} from "@mui/material";
 import FakerTable from "./components/Table";
-import { json2csv } from 'json-2-csv';
+import Papa from 'papaparse';
 
 
 const computeNumValue = (value: number, maxRange: number) => {
@@ -90,7 +90,7 @@ function App() {
   }
 
   const exportToCSV = async () => {
-    const csv = await json2csv(data)
+    const csv = Papa.unparse(data);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
